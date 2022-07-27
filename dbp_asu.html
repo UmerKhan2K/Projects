@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en_US">
+   <head>
+        <title>Insert Supplier Information </title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+	</head>
+    <body>
+		<h1>Enter Details of Supplier</h1>
+	<br>
+	<form method="post">
+	<label for="suid">Supplier ID:</label>
+	<input type="number" id="suid" name="suid" min="300000" max="399999"required>	
+	<label for="sun">Supplier Name:</label>
+	<input type="text" id="sun" name="sun" required>	
+	<br>
+	<br>
+	<label for="suphone">Phone No:</label>
+	<input type="number" id="suphone" name="suphone" placeholder="xxxxxxxxxxx" min="0" minlength="11" maxlength="11" max="99999999999" required>	
+	<label for="suaddr">Address Area:</label>
+	<input type="text" id="suaddr" name="suaddr" required>	
+	<br>
+	<br>
+	<label for="sutown">Town:</label>
+	<input type="text" id="sutown" name="sutown" >	
+	<label for="sucity">City:</label>
+	<input type="text" id="sucity" name="sucity" required>	
+	<br>
+    <br>
+	<label for="sustate">State:</label>
+    <select type="text" name="sustate" id="sustate">
+        <option value="ICT">ICT</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Sindh">Sindh</option>
+        <option value="KP">KP</option>
+        <option value="GB">GB</option>
+        <option value="Balochistan">Balochistan</option>
+        <option value="Kashmir">Kashmir</option>
+    </select>	
+	<label for="suzip">Zip Code:</label>
+	<input type="number" id="suzip" name="suzip" min="0" max="9999999999">	
+	<br>
+	<br>
+	<input type="submit" value="Save to Database" name="button1">
+	</form>
+    </body>
+</html>

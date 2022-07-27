@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<?php
+$db_user = "scott";
+$db_pass = "1234"; 
+$con = oci_connect($db_user,$db_pass,'(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = ARSHAD)(PORT = 1521)) (CONNECT_DATA = (SERVICE_NAME = orcl) (SID = orcl)))');
+$sql_select="select categoryfrom item";
+$query_id3 = oci_parse($con, $sql_select);
+$runselect = oci_execute($query_id3);
+while($row = oci_fetch_array($query_id3, OCI_BOTH+OCI_RETURN_NULLS))
+{
+    echo $row["CATEGORY"];
+}
+?>
+<html lang="en_US">
+   <head>
+        <title>List Items</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+		    <style>
+            table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Search Items</h1>
+        <br>
+        <br>
+        <form method="post" action="dbp_li.php">
+                <input type="submit" value="Search All Items" name="button1">
+                <br>
+                <br>
+                <h5>Search Items of Specific Category</h5>
+                <select name="itemcat" id="itemcat">
+                <?php 
+                while($row = oci_fetch_array($query_id3, OCI_BOTH+OCI_RETURN_NULLS))
+                {
+                    echo "<option value=$row[CATEGORY]>$row[CATEGORY]</option>";
+                } ?>
+                </select>
+
+
+        </form>
+    </body>
+    </html>

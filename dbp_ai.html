@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en_US">
+   <head>
+        <title>Insert Item Information </title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+	</head>
+    <body>
+		<h1>Enter Details of Item</h1>
+	<br>
+	<form method="post">
+	<label for="itemid">Item ID:</label>
+	<input type="number" id="itemid" name="itemid" min="400000" max="499999"required>	
+	<label for="category">Category:</label>
+	<input type="text" id="category" name="category" required>	
+	<br>
+	<br>
+	<label for="suid">Supplier ID:</label>
+	<input type="number" id="suid" name="suid" min="300000" max="399999" required>	
+	<label for="itemn">Item Name:</label>
+	<input type="text" id="itemn" name="itemn" required>	
+	<br>
+	<br>
+	<label for="itemq">Quantity:</label>
+	<input type="number" id="itemq" name="itemq" min="0" max="99999" value="0">	
+	<label for="itempp">Purchase Price:</label>
+	<input type="number" id="itempp" name="itempp" min="0" max="999999" required>	
+	<br>
+	<br>
+	<input type="submit" value="Save to Database" name="button1">
+	</form>
+    </body>
+</html>

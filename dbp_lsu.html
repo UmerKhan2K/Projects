@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en_US">
+   <head>
+        <title>List Suppliers</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+		    <style>
+            table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Search Suppliers</h1>
+        <br>
+        <br>
+        <form method="post" action="dbp_lsu.php">
+                <input type="submit" value="Search All Suppliers" name="button1">
+                <br>
+                <br>
+                <h5>Search Shipment History of Specific Supplier</h5>
+                <input type="number" id="itemsuh" name="itemsuh" min="300000" max="399999">
+                <input type="submit" value="Search This Specific Supplier Shipment History" name="button2">
+                <br>
+                <br>
+                <h5>Search Items of Specific Supplier</h5>
+                <input type="number" id="itemsu" name="itemsu" min="300000" max="399999">
+                <input type="submit" value="Search This Specific Supplier Items" name="button3">
+        </form>
+    </body>
+    </html>
